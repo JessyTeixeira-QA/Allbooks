@@ -1,4 +1,6 @@
 name: Workflow de Integração Contínua
+permissions:
+  contents: read
 
 on:
   push:
