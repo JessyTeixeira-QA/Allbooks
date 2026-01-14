@@ -1,30 +1,30 @@
 # AllBooks
 
-Boas vindas a API do AllBooks!
+Welcome to the AllBooks API!
 
-O AllBooks é uma loja virtual que vende livros da Casa do Código. 
-É um MVP que tá só começando e ainda tem muitas funcionalidades novas para serem desenvolvidas.
+AllBooks is an online store that sells books from Casa do Código.  
+It is an MVP that is just getting started and still has many new features to be developed.
 
 # JSONServer + JWT Auth
 
-Essa é ma API Rest mockada, utilizando json-server e JWT.
+This is a mocked REST API, using json-server and JWT.
 
-## 🛠️ Instalação
+## 🛠️ Installation
 
 ```bash
 $ npm install
 $ npm run start-auth
 ```
-## 🛠️ Como se registrar?
 
-Você pode fazer isso efetuando uma requisição post para:
+## 🛠️ How to register?
+
+You can do this by making a POST request to:
 
 ```
 POST http://localhost:8000/public/registrar
 ```
 
-Com os seguintes dados:
-
+With the following data:
 
 ```
 {
@@ -37,38 +37,37 @@ Com os seguintes dados:
 }
 ```
 
-Repare que o e-mail é um campo único e usuários com e-mails duplicados não serão persistidos.
+Note that the email is a unique field and users with duplicate emails will not be saved.
 
-## 🛠️ Como fazer login?
+## 🛠️ How to log in?
 
-Você pode fazer isso efetuando uma requisição post para:
+You can do this by making a POST request to:
 
 ```
 POST http://localhost:8000/public/login
 ```
 
-Com os seguintes dados:
-
+With the following data:
 
 ```
 {
   "email": "vinicios@alura.com.br",
-  "senha":"123456"
+  "senha": "123456"
 }
 ```
 
-Você vai receber um token no seguinte formato:
+You will receive a token in the following format:
 
 ```
 {
    "access_token": "<ACCESS_TOKEN>",
-   "user": { ... dados do usuário ... }
+   "user": { ... user data ... }
 }
 ```
 
-## Autenticar próximas requests?
+## Authenticate subsequent requests?
 
-E então, adicionar este mesmo token ao header das próximas requisições:
+Then, add this same token to the headers of the next requests:
 
 ```
 Authorization: Bearer <ACCESS_TOKEN>
